@@ -95,10 +95,6 @@ public class MyApp extends Application {
         //初始化七牛云直播
         StreamingEnv.init(getApplicationContext());
         Fresco.initialize(this);
-        //直播管理类
-        LiveKit.init(this);
-        //初始化融云管理类
-        SealAppContext.init(this);
         context = this;
         //初始化okHttp
         getOkHttpInstance();
@@ -107,10 +103,11 @@ public class MyApp extends Application {
         getRetrofit1();
         getRetrofit3();
         getRetrofit4();
+        //初始化融云
+        initRongIM();
         //连接融云
         connect(rongToken);
-        initRongIM();
-        //初始化融云
+
 
 
     }
@@ -221,7 +218,6 @@ public class MyApp extends Application {
     }
 
     private void connect(String token) {
-        Log.i("asdf","我走这里额了");
         Log.i("asdf",getApplicationInfo().packageName+"-=-=");
         Log.i("asdf",MyApp.getCurProcessName(getApplicationContext()));
         if (getApplicationInfo().packageName.equals(MyApp.getCurProcessName(getApplicationContext()))) {
@@ -262,7 +258,6 @@ public class MyApp extends Application {
      * 初始化融云IM/直播
      */
     private void initRongIM() {
-        Log.i("asdf","我走这里额了1");
         Log.i("asdf",getApplicationInfo().packageName+"-=-=1ppp");
         Log.i("asdf",MyApp.getCurProcessName(getApplicationContext())+"-=-=opp");
         if (getApplicationInfo().packageName.equals(getCurProcessName(getApplicationContext()))) {
@@ -278,10 +273,10 @@ public class MyApp extends Application {
 
              */
             RongIM.init(this);
-            //IM
-            SealAppContext.init(this);
-            //直播
+            //直播管理类
             LiveKit.init(this);
+            //初始化融云管理类
+            SealAppContext.init(this);
             String current = getCurProcessName(this);
             String mainProcessName = getPackageName();
             if (mainProcessName.equals(current)) {
