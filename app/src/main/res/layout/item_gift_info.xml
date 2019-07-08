@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/gift_img"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        app:actualImageScaleType="centerCrop" />
+
+
+    <TextView
+        android:id="@+id/gift_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gift_img"
+        android:layout_centerHorizontal="true"
+        android:lines="1"
+        android:textColor="@color/gray_33"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/gift_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gift_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:maxWidth="250dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:textColor="@color/live_chat_list_name"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/residual_number"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@id/gift_img"
+        android:layout_alignRight="@id/gift_img"
+        android:background="@drawable/round_red_10dp"
+        android:gravity="center"
+        android:text="10"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

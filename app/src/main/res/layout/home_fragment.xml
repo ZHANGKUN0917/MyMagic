@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:gravity="center_vertical">
+
+            <com.androidkun.xtablayout.XTabLayout
+                android:id="@+id/xTab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/iv_more"
+                android:overScrollMode="never"
+                app:tabPaddingStart="10dp"
+                app:xTabBackgroundColor="#fff"
+                app:xTabDividerWidth="0dp"
+                app:xTabDividerWidthWidthText="true"
+                app:xTabIndicatorColor="#fff"
+                app:xTabIndicatorHeight="0dp"
+                app:xTabMaxWidth="50dp"
+                app:xTabMinWidth="50dp"
+                app:xTabMode="scrollable"
+                app:xTabSelectedTextColor="@color/red"
+                app:xTabSelectedTextSize="20sp"
+                app:xTabTextColor="@color/gray_99"
+                app:xTabTextSelectedBold="true"
+                app:xTabTextSize="15sp">
+
+            </com.androidkun.xtablayout.XTabLayout>
+
+            <ImageView
+                android:id="@+id/iv_more"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/more_icon" />
+        </RelativeLayout>
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"></android.support.v4.view.ViewPager>
+    </LinearLayout>
+</layout>

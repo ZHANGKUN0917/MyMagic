@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_treasure_box_popupwindow_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="人气礼物"
+            android:textColor="#ff1800"
+            android:textSize="15sp" />
+
+        <View style="@style/me_fragment_item_divider_style" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="观看直播"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="15dp"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="观看直播5分钟可以获得1个人气礼物，加油~"
+            android:textColor="@color/gray_33"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:paddingRight="15dp">
+
+            <ImageView
+                android:id="@+id/iv_treasure_box1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:src="@drawable/box_canot_open" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/live_box_arrow" />
+
+            <ImageView
+                android:id="@+id/iv_treasure_box2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:src="@drawable/box_canot_open" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/live_box_arrow" />
+
+            <ImageView
+                android:id="@+id/iv_treasure_box3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:src="@drawable/box_canot_open" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/live_box_arrow" />
+
+            <ImageView
+                android:id="@+id/iv_treasure_box4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:src="@drawable/box_canot_open" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/live_box_arrow" />
+
+            <ImageView
+                android:id="@+id/iv_treasure_box5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:src="@drawable/box_canot_open" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/live_box_arrow" />
+
+            <ImageView
+                android:id="@+id/iv_treasure_box6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:src="@drawable/box_canot_open" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingTop="10dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="15dp">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_box1_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_live_box_progressbar_bg"
+                    android:src="@drawable/clip_live_box_progressbar" />
+
+                <TextView
+                    android:id="@+id/tv_box1_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="等待中"
+                    android:textColor="@drawable/selector_text_color_gray3_white"
+                    android:textSize="10sp" />
+            </FrameLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/live_box_arrow"
+                android:visibility="invisible" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_box2_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_live_box_progressbar_bg"
+                    android:src="@drawable/clip_live_box_progressbar" />
+
+                <TextView
+                    android:id="@+id/tv_box2_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="等待中"
+                    android:textColor="@drawable/selector_text_color_gray3_white"
+                    android:textSize="10sp" />
+            </FrameLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/live_box_arrow"
+                android:visibility="invisible" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_box3_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_live_box_progressbar_bg"
+                    android:src="@drawable/clip_live_box_progressbar" />
+
+                <TextView
+                    android:id="@+id/tv_box3_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="等待中"
+                    android:textColor="@drawable/selector_text_color_gray3_white"
+                    android:textSize="10sp" />
+            </FrameLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/live_box_arrow"
+                android:visibility="invisible" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_box4_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_live_box_progressbar_bg"
+                    android:src="@drawable/clip_live_box_progressbar" />
+
+                <TextView
+                    android:id="@+id/tv_box4_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="等待中"
+                    android:textColor="@drawable/selector_text_color_gray3_white"
+                    android:textSize="10sp" />
+            </FrameLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/live_box_arrow"
+                android:visibility="invisible" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_box5_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_live_box_progressbar_bg"
+                    android:src="@drawable/clip_live_box_progressbar" />
+
+                <TextView
+                    android:id="@+id/tv_box5_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="等待中"
+                    android:textColor="@drawable/selector_text_color_gray3_white"
+                    android:textSize="10sp" />
+            </FrameLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/live_box_arrow"
+                android:visibility="invisible" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_box6_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_live_box_progressbar_bg"
+                    android:src="@drawable/clip_live_box_progressbar" />
+
+                <TextView
+                    android:id="@+id/tv_box6_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="等待中"
+                    android:textColor="@drawable/selector_text_color_gray3_white"
+                    android:textSize="10sp" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <View style="@style/me_fragment_item_divider_style" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="分享直播"
+                    android:textColor="@color/gray_33"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="分享本次直播可获得1个人气礼物~"
+                    android:textColor="@color/gray_99"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_share_live_status"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:background="@drawable/selector_colore3_pcolor_round_10"
+                android:gravity="center"
+                android:text="可领取"
+                android:textColor="@drawable/selector_text_color_gray3_white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <View style="@style/me_fragment_item_divider_style" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="关注主播状态"
+                    android:textColor="@color/gray_33"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="关注主播可获得1个人气礼物~"
+                    android:textColor="@color/gray_99"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_attention_anchor_status"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:background="@drawable/selector_colore3_pcolor_round_10"
+                android:gravity="center"
+                android:text="可领取"
+                android:textColor="@drawable/selector_text_color_gray3_white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

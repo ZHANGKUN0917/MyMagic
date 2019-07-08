@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/live_bg"
+        tools:context=".live.ui.activity.LivePlayerActivity">
+
+        <com.pili.pldroid.player.widget.PLVideoView
+            android:id="@+id/VideoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/living_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/top_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="10dp"
+                    app:actualImageScaleType="centerCrop"
+                    app:placeholderImage="@drawable/avatar_def"
+                    app:placeholderImageScaleType="centerCrop"
+                    app:roundAsCircle="true" />
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:shadowColor="@color/black"
+                        android:shadowDx="5"
+                        android:shadowDy="5"
+                        android:shadowRadius="10"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_watch_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:shadowColor="@color/black"
+                        android:shadowDx="5"
+                        android:shadowDy="5"
+                        android:shadowRadius="10"
+                        android:text="0人"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/btn_add_attention"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/selector_is_has_attention" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rc_spectator_list"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:overScrollMode="never" />
+
+                <ImageView
+                    android:id="@+id/btn_live_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="15dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/live_close" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/top_bar2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/top_bar"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_contribution_amount"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@drawable/live_contribution_amount_bg"-->
+                <!--android:paddingLeft="8dp"-->
+                <!--android:paddingRight="8dp"-->
+                <!--android:text="贡献榜123456789"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="12sp" />-->
+                <!--<TextView-->
+                <!--android:id="@+id/broadcastTime"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="00:00:00"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="12sp"-->
+                <!--android:textStyle="bold" />-->
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/iv_water_mark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/water_mark_sdh" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_treasure_box"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/top_bar2"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="60dp"
+                android:layout_marginRight="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/live_treasure_box" />
+
+            <com.shidonghui.mymagic.widget.livewidget.ChatListView
+                android:id="@+id/chat_listview"
+                android:layout_width="match_parent"
+                android:layout_height="152dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="100dp"
+                android:layout_marginBottom="60dp"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+
+            <com.shidonghui.mymagic.live.GiftRootLayout
+                android:id="@+id/gift_root"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_above="@id/chat_listview"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <com.shidonghui.mymagic.live.GiftItemLayout
+                    android:id="@+id/firstItemLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:visibility="invisible"
+                    app:gift_index="1">
+
+                </com.shidonghui.mymagic.live.GiftItemLayout>
+
+                <com.shidonghui.mymagic.live.GiftItemLayout
+                    android:id="@+id/lastItemLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:visibility="invisible"
+                    app:gift_index="0" />
+
+
+            </com.shidonghui.mymagic.live.GiftRootLayout>
+            <!-- <com.huitong.privateboard.live.ui.animation.ShowBoxLayout
+                 android:id="@+id/layout_box_show"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_above="@id/chat_listview" />
+
+             <com.huitong.privateboard.live.ui.animation.ShowJoinLayout
+                 android:id="@+id/layout_join_show"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignTop="@id/chat_listview" />
+
+             <com.huitong.privateboard.live.ui.animation.ShowGiftsLayout
+                 android:id="@+id/layout_gift01"
+                 android:layout_width="wrap_content"
+                 android:layout_height="35dp"
+                 android:layout_above="@+id/chat_listview"
+                 android:layout_marginBottom="40dp"
+                 android:layout_marginLeft="15dp" />
+
+             <com.huitong.privateboard.live.ui.animation.ShowGiftsLayout
+                 android:id="@+id/layout_gift02"
+                 android:layout_width="wrap_content"
+                 android:layout_height="35dp"
+                 android:layout_above="@+id/layout_gift01"
+                 android:layout_marginBottom="20dp"
+                 android:layout_marginLeft="15dp" />-->
+
+            <include
+                android:id="@+id/bottom_bar"
+                layout="@layout/live_player_bottombar" />
+
+            <com.shidonghui.mymagic.widget.animation.HeartLayout
+                android:id="@+id/heart_layout"
+                android:layout_width="86dp"
+                android:layout_height="match_parent"
+                android:layout_above="@id/bottom_bar"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </FrameLayout>
+</layout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name" translatable="false">魔法</string>
+    <string name="theme" translatable="false">主题</string>
+    <string name="cancel" translatable="false">取消</string>
+    <string name="done" translatable="false">完成</string>
+    <string name="connect_server_fail" translatable="false">当前无网络连接，请稍后重试</string>
+    <!--直播-->
+    <string name="live_shutup" translatable="false">你已被管理员禁言\n无法进行该操作</string>
+    <string name="live_save_explain" translatable="false">直播时间少于5分钟，回放不予保存\n直播时间高于5分钟，回放可在直播列表中观看</string>
+    <string name="live_join_notice" translatable="false">师董会官方倡导绿色直播，对直播内容24小时在线巡查。任何传播违法、违规、低俗、暴力等不良信息将会封停账号。\n师董会安全提示：聊天中若有涉及财产的操作，请一定要先核实好友身份，谨防受骗。</string>
+    <string name="live_norm" translatable="false">1、师董会运营管理团队（以下简称“师董会官方”）负责直播行为的监督管理工作。当主播开通师董会直播服务并从事直播演艺行为时，表明主播完全遵从师董会官方对主播的监管行为。因主播存在违反本规范、《师董会用户协议》师董会公司已经发布或未来即将发布的所有平台规则时，师董会官方有权视情节严重程度依据本规范相关处罚措施进行惩处。</string>
+</resources>

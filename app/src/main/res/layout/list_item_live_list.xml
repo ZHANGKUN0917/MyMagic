@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sdv_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    app:roundBottomLeft="false"
+                    app:roundBottomRight="false"
+                    app:roundedCornerRadius="5dp" />
+
+                <RelativeLayout
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/round_fe9d00_20dp">
+
+
+                    <TextView
+                        android:id="@+id/tv_live_little_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_toRightOf="@id/iv_live"
+                        android:text="直播中"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_live_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="产业中国·大美汝州"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
+
+                <TextView
+                    android:id="@+id/tv_live_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="12sp"
+                    android:text="本周三  20:00"
+                    android:textColor="@color/gray_99"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tv_live_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="12sp"
+                    android:text="900人报名" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

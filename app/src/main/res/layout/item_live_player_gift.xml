@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/blackBackground"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/round_black30_15dp" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdv_head"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        app:actualImageScaleType="centerCrop"
+        app:placeholderImage="@drawable/avatar_def"
+        app:placeholderImageScaleType="centerCrop"
+        app:roundAsCircle="true" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/sdv_head"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userName"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/sdv_head"
+        android:textColor="@color/live_chat_list_name"
+        android:textSize="12sp" />
+
+    <!--<LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/blackBackground"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+         <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="16dp"
+             android:layout_marginBottom="2dp"
+             android:layout_marginLeft="5dp"
+             android:layout_marginRight="2dp"
+             android:scaleType="fitCenter"
+             android:src="@mipmap/direct_num_plus" />
+
+         <ImageView
+             android:id="@+id/number1"
+             android:layout_width="wrap_content"
+             android:layout_height="25dp"
+             android:scaleType="fitCenter"
+             android:src="@mipmap/direct_num0" />
+
+         <ImageView
+             android:id="@+id/number2"
+             android:layout_width="wrap_content"
+             android:layout_height="25dp"
+             android:scaleType="fitCenter"
+             android:src="@mipmap/direct_num0" />
+    </LinearLayout>-->
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/gift_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignRight="@id/blackBackground"
+        android:layout_alignBottom="@+id/description"
+        android:layout_marginRight="14dp"
+        app:actualImageScaleType="centerInside"
+        app:placeholderImageScaleType="centerInside" />
+
+    <com.shidonghui.mymagic.live.GiftCountTextView
+        android:id="@+id/giftNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@id/gift_image"
+        android:text="x1"
+        android:textColor="#ffde00"
+        android:textSize="20sp" />
+</RelativeLayout>
+
+

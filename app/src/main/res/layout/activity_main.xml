@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="#fff"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rd_home"
+                style="@style/bottom_tag_style"
+                android:drawableTop="@drawable/select_home"
+                android:text="首页" />
+
+            <RadioButton
+                android:id="@+id/rd_video"
+                style="@style/bottom_tag_style"
+                android:drawableTop="@drawable/select_video"
+                android:text="视频" />
+
+            <RadioButton
+                android:id="@+id/rd_find"
+                style="@style/bottom_tag_style"
+                android:drawableTop="@drawable/select_find"
+                android:text="发现" />
+
+            <RadioButton
+                android:id="@+id/rd_personal"
+                style="@style/bottom_tag_style"
+                android:drawableTop="@drawable/select_me"
+                android:text="个人" />
+
+        </RadioGroup>
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/radioGroup" />
+
+    </RelativeLayout>
+</layout>
